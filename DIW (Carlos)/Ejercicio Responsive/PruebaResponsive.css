@@ -1,0 +1,88 @@
+@media only screen and (min-width : 1224px) {
+
+    div{
+        display: flex;
+    }
+
+    .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:sandybrown;
+        width: 50%;
+        height: 5em;
+        margin: 1em;
+    }
+
+    .second{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:darkgoldenrod;
+        height: 35em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .third{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:cornflowerblue;
+        width: 50%;
+        height: 20em;
+        margin: 1em;
+    }
+
+    .fourth{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:burlywood;
+        width: 50%;
+        height: 10em;
+        margin: 1em;
+    }
+
+}
+
+@media only screen and (width <= 768px) and (width >= 1024px) {
+
+    .first{
+        background-color:sandybrown;
+        height: 5em;
+        margin: 1em;
+    }
+
+    .second{
+        background-color:darkgoldenrod;
+        height: 25em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .third{
+        background-color:cornflowerblue;
+        height: 10em;
+        margin: 1em;
+    }
+
+    .footer{
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .fourth{
+        background-color:burlywood;
+        height: 10em;
+        margin: 1em;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+  }

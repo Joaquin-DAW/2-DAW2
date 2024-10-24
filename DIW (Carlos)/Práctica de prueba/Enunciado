@@ -1,0 +1,47 @@
+# Advanced Flexbox Exercise: Social Media Dashboard Layout
+
+Your task is to create a responsive social media dashboard layout using CSS flexbox. The layout should adapt to different screen sizes and include the following components:
+
+1. A header with a logo and navigation menu
+2. A main content area with:
+
+    A user profile section
+    A feed of posts
+    A sidebar with trending topics and suggested follows
+
+3. A footer with multiple columns
+
+## Requirements:
+
+1. Use flexbox for all layouts (avoid using grid or float).
+2. The layout should be responsive and work well on both desktop and mobile devices.
+3. On desktop:
+
+    The header should have the logo on the left and navigation menu on the right.
+    The main content should be a row with the profile on the left, feed in the center, and sidebar on the right.
+    The footer should have 4 columns of equal width.
+
+4. On mobile (screen width less than 768px):
+
+    The header should stack the logo above the navigation menu.
+    The main content should be a single column with the order: profile, feed, sidebar.
+    The footer should have 2 columns.
+
+5. Implement the following specific flexbox challenges:
+
+    Use `flex-grow` to make the feed take up any available extra space in the main content area.
+    Use `order` to change the layout of elements on mobile.
+    Implement a flexible grid of cards for the feed posts (3 columns on desktop, 2 on tablet, 1 on mobile).
+    Use `align-self` to vertically center the logo in the header while keeping other elements at the top.
+
+6. Add some interactivity:
+
+    When hovering over nav items, use CSS to change colors
+    Implement a "sticky" header that remains at the top of the page when scrolling.
+
+Bonus:
+
+    Implement a dark mode using CSS custom properties.
+    Create a "load more" button at the bottom of the feed that's always centered.
+
+Remember to use semantic HTML5 tags where appropriate and comment your CSS to explain your flexbox choices.

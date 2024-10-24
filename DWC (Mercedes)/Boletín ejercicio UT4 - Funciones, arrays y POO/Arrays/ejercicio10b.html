@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación con funciones, arrays y objetos definidos por el usuario </title>
+    <script src="ejercicio10b.js"></script>
+</head>
+<body>
+    Refactoriza el siguiente código usando funciones flecha.
+
+    b)Asegúrate de que la función se llama doubleOddNumbers.
+    function doubleOddNumbers(arr){
+        return arr.filter(function(val){
+            return val % 2 !== 0;
+        }).map(function(val){
+            return val *2;
+        })
+    }
+</body>
+</html>

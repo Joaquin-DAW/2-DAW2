@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación con funciones, arrays y objetos definidos por el usuario </title>
+    <script src="ejercicio10a.js"></script>
+</head>
+<body>
+    Refactoriza el siguiente código usando funciones flecha.
+
+    a)Asegúrate de que la función se llama tripleAndFilter.
+    
+    function tripleAndFilter(arr){
+    		return arr.map(function(value){
+        			return value * 3;
+     			}).filter(function(value){
+       			return value % 5 === 0;
+      		})
+    }
+</body>
+</html>

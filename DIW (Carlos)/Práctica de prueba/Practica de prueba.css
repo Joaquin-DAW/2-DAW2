@@ -1,0 +1,230 @@
+@media only screen and (min-width : 1224px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        background:radial-gradient(rgb(100, 100, 231), rgb(116, 190, 250)); 
+        padding: 10px 20px;
+        height: 10em;
+    }
+
+    .logo img{
+        width: 8em;
+    }
+
+    .navbar{
+        display: flex; 
+        align-items: center; 
+        padding: 10px 20px; 
+    }
+
+    .navbar ul{
+        list-style-type: none; /* Remove bullet points from the list */
+        display: flex; /* Use flexbox for horizontal layout */
+        margin-right: 5em;
+    }
+
+    .navbar li {
+        margin-left: 8em; /* Space between each menu item */
+    }
+
+    .navbar a {
+        color: white; /* White text for the links */
+        text-decoration: none; /* Remove underline from links */
+        font-size: 30px; /* Base font size */
+        font-family:Helvetica;
+    }
+
+    .avatar img{
+        width: 6em;
+    }
+
+    .content{
+        padding: 1em;
+        display:flex;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 3em;
+        width: 12em;
+        height: 14em;
+        background-color:rgb(116, 190, 250);
+        border-radius: 30px;
+    }
+
+    .profile p{
+        margin-top:1em;
+    }
+
+    .profile img{
+        padding-top: 1em;
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .post {
+        width: 67%;
+        background-color: #5898e2;
+        padding: 1em;
+        margin-right: 3em;
+        border-radius: 8px;
+    }
+
+    .post h1{
+        padding-bottom: 0.5em;
+    }
+    
+    .post-item {
+        background-color: white;
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 5px;
+    }
+    
+    .post-item p {
+        margin-top: 0.5em;
+        font-size: 1em;
+    }
+
+    .topics {
+        width: 18em; 
+        background-color: rgb(54, 157, 241);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trending-topics, .suggested-follows {
+        background-color: white;
+        padding: 1em;
+        border-radius: 6px;
+        margin-bottom: 2em;
+    }
+    
+    .trending-topics h3, .suggested-follows h3 {
+        padding-bottom: 1em;
+    }
+    
+    .trending-topics ul, .suggested-follows ul {
+        list-style: none;
+    }
+    
+    .trending-topics li {
+        margin-bottom: 0.5em;
+        color: rgb(11, 125, 170);
+    }
+    
+    .suggested-follows li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    
+    .suggested-follows li img {
+        width: 3em;
+        height: 3em;
+        margin-right: 0.5em;
+    }
+    
+    .suggested-follows li:hover, .trending-topics li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #0056a3;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #032250;
+        color: white;
+        text-align: center;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 80%;
+        margin: auto;
+    }
+    
+    .footer-column {
+        padding: 1em;
+        margin-top: 1em;
+        width: 50em;
+    }
+    
+    .footer-column h4 {
+        margin-bottom: 1em;
+        font-size: 18px;
+    }
+    
+    .footer-column ul {
+        list-style: none;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-column ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-column ul li a:hover {
+        color: rgb(165, 234, 255);
+    }
+
+
+}
+
+@media only screen and (width <= 768px) and (width >= 1024px) {
+
+    .first{
+        background-color:sandybrown;
+        height: 5em;
+        margin: 1em;
+    }
+
+    .second{
+        background-color:darkgoldenrod;
+        height: 25em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .third{
+        background-color:cornflowerblue;
+        height: 10em;
+        margin: 1em;
+    }
+
+    .footer{
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .fourth{
+        background-color:burlywood;
+        height: 10em;
+        margin: 1em;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+  }
