@@ -23,15 +23,15 @@ modulos.forEach((value, key) => {
 var moduloBuscar = "DWS";
 
 if (modulos.has(moduloBuscar)) {
-    console.log("El módulo "+moduloBuscar+" está presente: "+modulos.get(moduloBuscar));
-    modulos.delete(moduloBuscar);
-    console.log("El módulo "+moduloBuscar+" ha sido eliminado.");
+    console.log("El módulo " + moduloBuscar + " está presente. Número de alumnos matriculados: " + modulos.get(moduloBuscar).numAlumnos);
 } else {
-    console.log("El módulo "+moduloBuscar+" no está presente.");
+    console.log("El módulo " + moduloBuscar + " no está presente.");
 }
 console.log();
 
-console.log("Contenido del Map después de eliminar el módulo:");
-modulos.forEach((value, key) => {
-    console.log("Modulo: "+key+ ", Nombre: "+value.nombre+", Duración: "+value.duracion+", Alumnos Matriculados: "+value.numAlumnos);
+let totalAlumnos = 0;
+modulos.forEach((value) => {
+    totalAlumnos += value.numAlumnos;
 });
+
+console.log("Número total de alumnos matriculados en todos los módulos: " + totalAlumnos);

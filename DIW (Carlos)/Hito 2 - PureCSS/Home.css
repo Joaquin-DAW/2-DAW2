@@ -1,6 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
 }
 
 /*Encabezado*/
@@ -61,10 +67,65 @@ header {
     background-color: #0B4B1C;
 }
 
+.hero-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(12, 191, 223, 0) 80%), /* Gradiente en la parte superior */
+                        linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%),
+                        url("Imagenes/HeroBanner.png");
+    height: 80vh; /* Altura del hero banner */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+}
+
+.hero-contenedor{
+    text-shadow: #009e0d 1px 0 15px;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 60%;
+    margin-bottom: 15%;
+    text-align: center; /* Centra el texto */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño de fuente grande para el título */
+}
+
+p {
+    font-size: 1.5em; /* Tamaño de fuente más pequeño para la descripción */
+    margin-bottom: 10px; 
+}
+
+.cta-button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10%;
+    width: 40%;
+}
+
+.cta-button button{
+    padding: 15px 25px;
+    font-size: 1em;
+    color: white;
+    background-color: #004710;
+    border-color: #8faf00;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.cta-button button:hover {
+    background-color: #45a049;
+}
+
+.cta-button button:active {
+    background-color: #313a00;
+}
+
 /*Footer*/
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: #001A07;
     color: white;
