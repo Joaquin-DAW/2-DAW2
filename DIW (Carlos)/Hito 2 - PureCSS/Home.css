@@ -67,6 +67,7 @@ header {
     background-color: #0B4B1C;
 }
 
+/*Hero-banner*/
 .hero-banner{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(12, 191, 223, 0) 80%), /* Gradiente en la parte superior */
                         linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%),
@@ -123,6 +124,168 @@ p {
 .cta-button button:active {
     background-color: #313a00;
 }
+
+/*Servicios*/
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f5e9;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+}
+  
+.services-titulo {
+    font-size: 2.5em;
+    color: #4f3f28;
+    margin-bottom: 10px;
+}
+  
+.services-descripcion {
+    font-size: 1.2em;
+    color: #6d5845;
+    margin-bottom: 30px;
+}
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-elemento {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  
+  .service-imagen {
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+  }
+  
+  .service-titulo {
+    font-size: 1.5em;
+    color: #4f3f28;
+    margin: 15px 0;
+  }
+  
+  .service-descripcion {
+    font-size: 1em;
+    color: #5c4a3b;
+    margin-bottom: 15px;
+  }
+  
+  .service-boton {
+    display:inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4f3f28;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .service-boton:hover {
+    background-color: #6d5845;
+  }
+
+/*Popular-Destinations*/
+
+.popular-destinations {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f5e9;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+}
+
+.popular-titulo {
+    font-size: 2.5em;
+    color: #4f3f28;
+    margin-bottom: 10px;
+}
+  
+.popular-descripcion {
+    font-size: 1.2em;
+    color: #6d5845;
+    margin-bottom: 30px;
+}
+
+.explore-nature-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+  
+  /* Configuración de la cuadrícula para destinos */
+  .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mínimo 300px por columna */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .destination-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .destination-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .destination-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .destination-info {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .destination-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+  
+  .destination-price {
+    font-size: 1em;
+    color: #888;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .destination-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .destination-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .destination-button:hover {
+    background-color: #45a049;
+  }
+
 
 /*Footer*/
 footer {
