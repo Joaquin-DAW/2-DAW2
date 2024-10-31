@@ -373,6 +373,81 @@ p {
     transform: translateY(0);
   }
 
+  .activity-card {
+    width: 250px;
+    height: 300px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+    background-color: #007bff; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contenido inicial */
+.activity-content {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.activity-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.activity-short-desc {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para la información extra (oculta al inicio) */
+.activity-more-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: top 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.activity-card:hover .activity-more-info {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.activity-more-info p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.activity-more-info button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff4500;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.activity-more-info button:hover {
+    background-color: #ff6347;
+}
+
 /*Footer*/
 footer {
     width: 100%;
