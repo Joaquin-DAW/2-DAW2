@@ -9,11 +9,11 @@
 </head>
 
 <body>
-  <header class="flex justify-between items-center sticky top-0 z-10 py-4 bg-green-900 border-b-4 border-yellow-800 shadow-lg">
+  <header class="flex justify-between items-center sticky top-0 z-20 py-4 bg-green-900 border-b-4 border-yellow-800 shadow-lg">
     <!-- Contenedor del logo y título -->
     <div class="flex items-center ml-6 space-x-3 cursor-pointer">
       <!-- Imagen del logo (ajusta el tamaño según necesites) -->
-      <img src="Imagenes/Logoweb.png" class="w-16 h-auto rounded-lg border-2 border-yellow-800">
+      <img src="Imagenes/Logoweb.png" class="w-24 h-auto rounded-lg border-2 border-yellow-800">
       <!-- Título con estilo medieval -->
       <span class="text-3xl font-serif font-semibold text-yellow-200 tracking-widest">
         The beauty of Middle-Earth
@@ -21,20 +21,83 @@
     </div>
     <!-- Menú de navegación -->
     <ul class="flex mr-10 font-medium">
-      <li class="mr-6 p-1 border-b-2 border-yellow-600">
-        <a class="cursor-default text-yellow-200 hover:text-yellow-400" href="#">Home</a>
+      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Home</a>
       </li>
-      <li class="mr-6 p-1">
-        <a class="text-yellow-100 hover:text-yellow-400" href="#">News</a>
+      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Categorias</a>
       </li>
-      <li class="mr-6 p-1">
-        <a class="text-yellow-100 hover:text-yellow-400" href="#">Tutorials</a>
+      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Sobre nosotros</a>
       </li>
-      <li class="mr-6 p-1">
-        <a class="text-yellow-100 hover:text-yellow-400" href="#">Videos</a>
+      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Contacto</a>
       </li>
     </ul>
   </header>
+
+  <section class="relative h-96 w-full bg-cover bg-center" style="background-image: url('Imagenes/headerblog.webp');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-200 drop-shadow-lg">Bienvenidos al blog de la Tierra Media</h1>
+      <p class="mt-4 text-lg md:text-xl lg:text-2xl text-amber-100 max-w-2xl drop-shadow-md">
+        Descubre la belleza, la historia, y la magia de un mundo inspirado en la obra de J.R.R. Tolkien. Explora sus lugares, culturas, y criaturas a través de nuestras historias.
+      </p>
+      <a href="#blog-content" class="mt-6 px-6 py-3 bg-amber-700 text-amber-100 hover:bg-amber-800 rounded-lg shadow-md transition duration-200">
+        Explora el blog
+      </a>
+    </div>
+  </section>
+
+   <!-- Search Bar -->
+   <div class="p-6">
+    <input type="text" placeholder="Buscar..." class="w-full md:w-1/2 p-2 border border-yellow-600 rounded-lg" />
+  </div>
+
+  <!-- Blog Content -->
+  <main id="blog-content" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Article Card Example -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img src="Imagenes/articulo1.jpg" alt="Articulo 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-semibold text-green-900">Título del Artículo 1</h2>
+        <p class="mt-2 text-gray-600">Aquí va un breve resumen o extracto del artículo que describe de qué trata.</p>
+        <p class="mt-2 text-sm text-gray-500">Publicado el <span class="font-semibold">10 de noviembre, 2024</span> por <span class="font-semibold">Autor 1</span></p>
+        <div class="mt-2 flex justify-between items-center">
+          <a href="#" class="text-yellow-600 hover:underline">Leer más</a>
+          <span class="text-sm text-gray-500">Categoría 1, Tag1, Tag2</span>
+        </div>
+      </div>
+    </div>
+    <!-- Repite la estructura de la tarjeta para más artículos -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img src="Imagenes/articulo2.jpg" alt="Articulo 2" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-semibold text-green-900">Título del Artículo 2</h2>
+        <p class="mt-2 text-gray-600">Aquí va un breve resumen o extracto del segundo artículo.</p>
+        <p class="mt-2 text-sm text-gray-500">Publicado el <span class="font-semibold">9 de noviembre, 2024</span> por <span class="font-semibold">Autor 2</span></p>
+        <div class="mt-2 flex justify-between items-center">
+          <a href="#" class="text-yellow-600 hover:underline">Leer más</a>
+          <span class="text-sm text-gray-500">Categoría 2, Tag3</span>
+        </div>
+      </div>
+    </div>
+    <!-- Añade más artículos aquí -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-yellow-200 py-6 mt-10">
+    <div class="container mx-auto text-center">
+      <p>Contacto: info@ejemplo.com</p>
+      <div class="flex justify-center mt-4 space-x-4">
+        <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mt-4 text-sm">© 2024 The beauty of Middle-Earth. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
   </h1>
 </body>
 

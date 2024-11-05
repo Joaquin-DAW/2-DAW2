@@ -1,7 +1,5 @@
 /*Implementar el ejercicio 20 y 21(sólo imprimir los datos), usando objetos. (P.e. clase Persona)*/ 
 
-import { Persona } from './Persona.js';
-
 let personas = [];
 
 function capturarDatos() {
