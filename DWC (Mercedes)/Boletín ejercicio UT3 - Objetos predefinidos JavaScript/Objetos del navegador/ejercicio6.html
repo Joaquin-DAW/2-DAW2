@@ -7,7 +7,32 @@
     <script src="ejercicio6.js"></script>
 </head>
 <body>
-    Hacer un programa en el que el usuario introduzca, nombre, profesión y edad separado por comas. Después el programa debe mostrar la edad 
-    del usuario por pantalla.
+    Crea una página web que realice las siguientes funciones desde la página principal. Crea botones para cada realizar cada una de las siguientes opciones:
+	- Abrir ventana flotante
+	- Abrir ventana flotante y detenerla
+	- Cerrar ventana flotante
+	- Dar foco a la ventana flotante
+	- Quitar foco ventana nueva
+	- Scroll absoluto (0, 1000)
+Desde la ventana secundaria se podrá realizar:
+	- Mover absoluto (500, 150)
+	- Mover relativo (0,50)
+	- Redimensionar absoluto (500,500)
+	- Redimensionar relativo (-50, -50)
+
+
+    <h1>Control de Ventana Flotante</h1>
+    <button onclick="abrirVentana()">Abrir ventana flotante</button>
+    <button onclick="abrirYDetenerVentana()">Abrir ventana flotante y detenerla</button>
+    <button onclick="cerrarVentana()">Cerrar ventana flotante</button>
+    <button onclick="darFoco()">Dar foco a la ventana flotante</button>
+    <button onclick="quitarFoco()">Quitar foco ventana nueva</button>
+    <button onclick="scrollAbsoluto()">Scroll absoluto (0, 1000)</button>
+
+    <h2>Ventana secundaria</h2>
+    <button onclick="moverAbsoluto()">Mover absoluto (500, 150)</button>
+    <button onclick="moverRelativo()">Mover relativo (0, 50)</button>
+    <button onclick="redimensionarAbsoluto()">Redimensionar absoluto (500, 500)</button>
+    <button onclick="redimensionarRelativo()">Redimensionar relativo (-50, -50)</button>
 </body>
 </html>

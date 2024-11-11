@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
 }
@@ -136,7 +136,6 @@ p {
     padding: 50px 20px;
     background-color: #f7f5e9;
     color: #333;
-    font-family: 'Times New Roman', serif;
 }
   
 .services-titulo {
@@ -292,21 +291,19 @@ p {
     background-color: #6d5845;
 }
 
-/* Section styling */
+/* Testimonio */
 .testimonials-section {
-    padding: 20px;
+    padding: 20px 20px 80px 20px;
     background-color: #f0f0f0;
     font-family: 'Times New Roman', serif;
   }
   
-  /* Grid styling */
   .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
   
-  /* Card styling */
   .testimonial-card {
     position: relative;
     padding: 20px;
@@ -317,7 +314,6 @@ p {
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
-  /* User photo */
   .user-photo {
     width: 60px;
     height: 60px;
@@ -325,7 +321,6 @@ p {
     object-fit: cover;
   }
   
-  /* Testimonial content */
   .testimonial-content h3 {
     font-size: 1.2em;
     color: #333;
@@ -338,22 +333,21 @@ p {
   }
   
   .rating {
-    color: #FFD700; /* Star color */
+    color: #b49a03; 
+    font-size:xx-large;
   }
   
-  /* Hover effect */
   .testimonial-card:hover {
     transform: scale(1.05);
     background-color: #333;
     color: #f0f0f0;
   }
   
-  /* Hover info styling */
   .hover-info {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     height: 100%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -366,8 +360,8 @@ p {
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
+
   
-  /* Show hover-info on card hover */
   .testimonial-card:hover .hover-info {
     opacity: 1;
     transform: translateY(0);
@@ -386,10 +380,9 @@ p {
 
 .activity-card:hover {
     transform: scale(1.05);
-    background-color: #007bff; /* Cambia el color de fondo al pasar el ratón */
+    background-color: #007bff; 
 }
 
-/* Estilos para el contenido inicial */
 .activity-content {
     padding: 20px;
     text-align: center;
@@ -406,7 +399,6 @@ p {
     color: #555;
 }
 
-/* Estilos para la información extra (oculta al inicio) */
 .activity-more-info {
     position: absolute;
     top: 100%;
@@ -448,8 +440,136 @@ p {
     background-color: #ff6347;
 }
 
+/* Seccion guias */
+.guides-section{
+    margin-top: 20px;
+}
+
+.guides-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row-padding {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px; 
+    max-width: 33%; 
+    margin: 10px; 
+}
+
+.light-grey {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    padding: 15px;
+}
+
+.image-container {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+}
+.opacity {
+    color: #777;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #444;
+}
+
+/* Contacto */
+.contact-wrapper {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Margen alrededor del recuadro */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+    background-color: #f0f0f0; /* Color de fondo de la página para contraste */
+}
+
+.contact-section {
+    background-color: #f4f4f4; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: left; /* Alinear el texto a la izquierda */
+    width: 70%; /* Ocupar 70% del ancho de la página */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.contact-section h2 {
+    color: #333; /* Color del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.contact-section p {
+    color: #666; /* Color del texto */
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+.contact-info {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.icon-location::before,
+.icon-phone::before,
+.icon-email::before {
+    display: inline-block;
+    width: 30px; /* Ancho del ícono */
+    margin-right: 5px;
+}
+
+.input-field {
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    margin: 8px 0; /* Espaciado vertical */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.submit-button {
+    background-color: #000; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 12px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+}
+
+.submit-button:hover {
+    background-color: #444; /* Color al pasar el mouse */
+}
+
 /*Footer*/
-footer {
+footer, footer h3{
     width: 100%;
     background-color: #001A07;
     color: white;

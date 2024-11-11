@@ -4,14 +4,14 @@
 
 let datos = prompt("Introduce nombre, apellidos, DNI y fecha de nacimiento separados por comas.");
 
-let arrayBidimensional = [];
+let usuarios = [];
 
-while (datos !="") {
+while (datos !=="") {
         let arrayDatos= datos.split(",");
 
-        arrayBidimensional.push(arrayDatos);
+        usuarios.push(arrayDatos);
 
         datos = prompt("Introduce nombre, apellidos, DNI y fecha de nacimiento separados por comas. Introduce cadena vacía para salir:");
 }
 
-console.log(arrayBidimensional);
+console.log(usuarios);

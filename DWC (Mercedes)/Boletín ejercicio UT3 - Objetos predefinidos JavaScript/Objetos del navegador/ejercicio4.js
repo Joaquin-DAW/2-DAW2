@@ -1,18 +1,17 @@
-/*Pedimos una cadena de texto que sabemos que puede contener paréntesis. Realiza un script que extraiga la cadena que se encuentra entre 
-los paréntesis. Ejemplo: Si escribimos el texto “Hola (que) tal” se mostrará “que”. Si no existe el signo “(“ mostrará una cadena vacía y si 
-existe el signo “(“ pero no el signo “)” mostrará desde el primer paréntesis hasta el final.*/ 
+/*En un cuadro de diálogo de alerta, muestre el alto y ancho en píxeles y la profundidad de color de su pantalla. 
+Cada valor será separado por un salto de línea.*/ 
 
-let texto = prompt("Introduce un texto");
+function mostrarInformacionPantalla() {
+    // Obtener el ancho y alto de la pantalla
+    let anchoPantalla = window.screen.width;
+    let altoPantalla = window.screen.height;
 
-let primerP = texto.indexOf("(");
-let ultimoP = texto.indexOf(")");
+    // Obtener la profundidad de color (número de bits por píxel)
+    let profundidadColor = window.screen.colorDepth;
 
-if (primerP>-1 && ultimoP>-1){
-    console.log(texto.substring(primerP+1, ultimoP));
+    // Mostrar la información en un cuadro de alerta
+    alert(`Ancho de la pantalla: ${anchoPantalla} píxeles\nAlto de la pantalla: ${altoPantalla} píxeles\nProfundidad de color: ${profundidadColor} bits`);
 }
-else if (primerP==-1){
-    console.log(" ");
-}
-else if (primerP>-1 && ultimoP==-1){      
-    console.log(texto.substring(primerP+1));
-}
+
+// Llamar a la función cuando la página cargue
+window.onload = mostrarInformacionPantalla;
