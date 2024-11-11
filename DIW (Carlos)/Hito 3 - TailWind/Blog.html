@@ -6,87 +6,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* Fuentes y colores inspirados en la fantasía medieval */
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #2f2b2e; /* Fondo oscuro de tonos tierra */
+      color: #d9c9a0;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cinzel', serif; /* Fuente de estilo medieval */
+      color: #c4a484;
+    }
+
+    a {
+      color: #d9c9a0;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #f4e1b8;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header class="flex justify-between items-center sticky top-0 z-20 py-4 bg-green-900 border-b-4 border-yellow-800 shadow-lg">
-    <!-- Contenedor del logo y título -->
+<body class="bg-gray-800">
+
+  <!-- Encabezado -->
+  <header class="flex justify-between items-center sticky top-0 z-20 py-4 bg-gray-900 border-b-4 border-yellow-800 shadow-lg">
     <div class="flex items-center ml-6 space-x-3 cursor-pointer">
-      <!-- Imagen del logo (ajusta el tamaño según necesites) -->
       <img src="Imagenes/Logoweb.png" class="w-24 h-auto rounded-lg border-2 border-yellow-800">
-      <!-- Título con estilo medieval -->
       <span class="text-3xl font-serif font-semibold text-yellow-200 tracking-widest">
-        The beauty of Middle-Earth
+        The Beauty of Middle-Earth
       </span>
     </div>
-    <!-- Menú de navegación -->
-    <ul class="flex mr-10 font-medium">
-      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+    <ul class="flex mr-10 font-semibold">
+      <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
         <a class="text-yellow-100 hover:text-yellow-400" href="#">Home</a>
       </li>
-      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
-        <a class="text-yellow-100 hover:text-yellow-400" href="#">Categorias</a>
+      <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Categorías</a>
       </li>
-      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
-        <a class="text-yellow-100 hover:text-yellow-400" href="#">Sobre nosotros</a>
+      <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+        <a class="text-yellow-100 hover:text-yellow-400" href="#">Sobre Nosotros</a>
       </li>
-      <li class="mr-6 p-1 hover:border-b-2 border-yellow-600">
+      <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
         <a class="text-yellow-100 hover:text-yellow-400" href="#">Contacto</a>
       </li>
     </ul>
   </header>
 
+  <!-- Imagen de presentación -->
   <section class="relative h-96 w-full bg-cover bg-center" style="background-image: url('Imagenes/headerblog.webp');">
-    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-200 drop-shadow-lg">Bienvenidos al blog de la Tierra Media</h1>
-      <p class="mt-4 text-lg md:text-xl lg:text-2xl text-amber-100 max-w-2xl drop-shadow-md">
-        Descubre la belleza, la historia, y la magia de un mundo inspirado en la obra de J.R.R. Tolkien. Explora sus lugares, culturas, y criaturas a través de nuestras historias.
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-200 drop-shadow-md">Bienvenidos a la Tierra Media</h1>
+      <p class="mt-4 text-lg md:text-xl lg:text-2xl text-yellow-100 max-w-2xl drop-shadow-md">
+        Explora las leyendas, culturas y paisajes de un mundo inspirado por la obra de J.R.R. Tolkien.
       </p>
-      <a href="#blog-content" class="mt-6 px-6 py-3 bg-amber-700 text-amber-100 hover:bg-amber-800 rounded-lg shadow-md transition duration-200">
+      <a href="#blog-content" class="mt-6 px-6 py-3 bg-yellow-800 text-yellow-100 hover:bg-yellow-700 rounded-lg shadow-md transition duration-200">
         Explora el blog
       </a>
     </div>
   </section>
 
-   <!-- Search Bar -->
-   <div class="p-6">
-    <input type="text" placeholder="Buscar..." class="w-full md:w-1/2 p-2 border border-yellow-600 rounded-lg" />
+  <!-- Contenido del Blog -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-8 bg-gray-800 text-yellow-200">
+    <div class="col-span-2 space-y-6">
+
+      <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
+        <img src="Imagenes/rivendell.jpg" alt="Nature" class="w-full max-h-[500px] object-cover">
+        <div class="p-6">
+          <h3 class="text-3xl font-bold">La leyenda de Rivendel</h3>
+          <p class="text-sm text-yellow-300 mt-2">Por <span class="font-semibold">Aragorn Telcontar</span>, April 7, 3019</p>
+          <p class="mt-4 text-yellow-100">
+            Descubre los secretos y maravillas de la última morada, un lugar de serenidad y belleza en medio de la oscuridad de la Tierra Media.
+          </p>
+          <a href="#" class="block mt-6 text-yellow-500 font-semibold hover:text-yellow-400"><b>Leer más »</b></a>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
+        <img src="Imagenes/Mirkwood.webp" alt="Adventure" class="w-full max-h-[500px]">
+        <div class="p-6">
+          <h3 class="text-3xl font-bold">El Bosque Negro</h3>
+          <p class="text-sm text-yellow-300 mt-2">Por <span class="font-semibold">Galadriel</span>, March 15, 3019</p>
+          <p class="mt-4 text-yellow-100">
+            Adéntrate en la historia de uno de los bosques más antiguos y misteriosos de la Tierra Media. Un lugar lleno de secretos, tanto oscuros como hermosos.
+          </p>
+          <a href="#" class="block mt-6 text-yellow-500 font-semibold hover:text-yellow-400"><b>Leer más »</b></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra Lateral -->
+    <div class="space-y-6">
+      <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold">Sobre el Autor</h4>
+          <p class="text-yellow-100 mt-2">Un viajero en la Tierra Media, compartiendo la historia, cultura y magia de este mundo fantástico.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold">Categorías Populares</h4>
+        </div>
+        <ul class="divide-y divide-yellow-700 text-yellow-100">
+          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
+            <span class="text-lg font-semibold">Aventura</span>
+          </li>
+          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
+            <span class="text-lg font-semibold">Épica</span>
+          </li>
+          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
+            <span class="text-lg font-semibold">Magia</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!-- Blog Content -->
-  <main id="blog-content" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Article Card Example -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img src="Imagenes/articulo1.jpg" alt="Articulo 1" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-green-900">Título del Artículo 1</h2>
-        <p class="mt-2 text-gray-600">Aquí va un breve resumen o extracto del artículo que describe de qué trata.</p>
-        <p class="mt-2 text-sm text-gray-500">Publicado el <span class="font-semibold">10 de noviembre, 2024</span> por <span class="font-semibold">Autor 1</span></p>
-        <div class="mt-2 flex justify-between items-center">
-          <a href="#" class="text-yellow-600 hover:underline">Leer más</a>
-          <span class="text-sm text-gray-500">Categoría 1, Tag1, Tag2</span>
-        </div>
-      </div>
-    </div>
-    <!-- Repite la estructura de la tarjeta para más artículos -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img src="Imagenes/articulo2.jpg" alt="Articulo 2" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h2 class="text-xl font-semibold text-green-900">Título del Artículo 2</h2>
-        <p class="mt-2 text-gray-600">Aquí va un breve resumen o extracto del segundo artículo.</p>
-        <p class="mt-2 text-sm text-gray-500">Publicado el <span class="font-semibold">9 de noviembre, 2024</span> por <span class="font-semibold">Autor 2</span></p>
-        <div class="mt-2 flex justify-between items-center">
-          <a href="#" class="text-yellow-600 hover:underline">Leer más</a>
-          <span class="text-sm text-gray-500">Categoría 2, Tag3</span>
-        </div>
-      </div>
-    </div>
-    <!-- Añade más artículos aquí -->
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-green-900 text-yellow-200 py-6 mt-10">
+  <!-- Pie de página -->
+  <footer class="bg-gray-900 text-yellow-200 py-6 mt-10">
     <div class="container mx-auto text-center">
       <p>Contacto: info@ejemplo.com</p>
       <div class="flex justify-center mt-4 space-x-4">
@@ -94,11 +140,10 @@
         <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
         <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
       </div>
-      <p class="mt-4 text-sm">© 2024 The beauty of Middle-Earth. Todos los derechos reservados.</p>
+      <p class="mt-4 text-sm">© 2024 The Beauty of Middle-Earth. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  </h1>
 </body>
 
 </html>
