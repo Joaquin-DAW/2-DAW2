@@ -6,40 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <style>
-    /* Fuentes y colores inspirados en la fantasía medieval */
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #2f2b2e; /* Fondo oscuro de tonos tierra */
-      color: #d9c9a0;
-    }
-    
-    h1, h2, h3, h4 {
-      font-family: 'Cinzel', serif; /* Fuente de estilo medieval */
-      color: #c4a484;
-    }
-
-    a {
-      color: #d9c9a0;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #f4e1b8;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=MedievalSharp&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="bg-gray-800">
+<body class="bg-gray-800 font-['Cinzel']">
 
   <!-- Encabezado -->
-  <header class="flex justify-between items-center sticky top-0 z-20 py-4 bg-gray-900 border-b-4 border-yellow-800 shadow-lg">
+  <header
+    class="flex justify-between items-center sticky top-0 z-20 py-4 bg-gray-900 border-b-4 border-yellow-800 shadow-lg">
     <div class="flex items-center ml-6 space-x-3 cursor-pointer">
       <img src="Imagenes/Logoweb.png" class="w-24 h-auto rounded-lg border-2 border-yellow-800">
-      <span class="text-3xl font-serif font-semibold text-yellow-200 tracking-widest">
+      <span class="text-3xl text-yellow-200 tracking-widest">
         The Beauty of Middle-Earth
       </span>
     </div>
@@ -63,11 +44,13 @@
   <section class="relative h-96 w-full bg-cover bg-center" style="background-image: url('Imagenes/headerblog.webp');">
     <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-200 drop-shadow-md">Bienvenidos a la Tierra Media</h1>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-200 drop-shadow-md">Bienvenidos a la Tierra
+        Media</h1>
       <p class="mt-4 text-lg md:text-xl lg:text-2xl text-yellow-100 max-w-2xl drop-shadow-md">
         Explora las leyendas, culturas y paisajes de un mundo inspirado por la obra de J.R.R. Tolkien.
       </p>
-      <a href="#blog-content" class="mt-6 px-6 py-3 bg-yellow-800 text-yellow-100 hover:bg-yellow-700 rounded-lg shadow-md transition duration-200">
+      <a href="#blog-content"
+        class="mt-6 px-6 py-3 bg-yellow-800 text-yellow-100 hover:bg-yellow-700 rounded-lg shadow-md transition duration-200">
         Explora el blog
       </a>
     </div>
@@ -78,24 +61,27 @@
     <div class="col-span-2 space-y-6">
 
       <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
-        <img src="Imagenes/rivendell.jpg" alt="Nature" class="w-full max-h-[500px] object-cover">
+        <img src="Imagenes/rivendell.jpg" alt="Rivendell" class="w-full max-h-[500px] object-cover">
         <div class="p-6">
           <h3 class="text-3xl font-bold">La leyenda de Rivendel</h3>
-          <p class="text-sm text-yellow-300 mt-2">Por <span class="font-semibold">Aragorn Telcontar</span>, April 7, 3019</p>
+          <p class="text-sm text-yellow-300 mt-2">Por <span class="font-semibold">Aragorn Telcontar</span>, April 7,
+            3019</p>
           <p class="mt-4 text-yellow-100">
-            Descubre los secretos y maravillas de la última morada, un lugar de serenidad y belleza en medio de la oscuridad de la Tierra Media.
+            Descubre los secretos y maravillas de la última morada, un lugar de serenidad y belleza en medio de la
+            oscuridad de la Tierra Media.
           </p>
           <a href="#" class="block mt-6 text-yellow-500 font-semibold hover:text-yellow-400"><b>Leer más »</b></a>
         </div>
       </div>
 
       <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
-        <img src="Imagenes/Mirkwood.webp" alt="Adventure" class="w-full max-h-[500px]">
+        <img src="Imagenes/Mirkwood.webp" alt="Adventure" class="w-full h-[500px]">
         <div class="p-6">
           <h3 class="text-3xl font-bold">El Bosque Negro</h3>
           <p class="text-sm text-yellow-300 mt-2">Por <span class="font-semibold">Galadriel</span>, March 15, 3019</p>
           <p class="mt-4 text-yellow-100">
-            Adéntrate en la historia de uno de los bosques más antiguos y misteriosos de la Tierra Media. Un lugar lleno de secretos, tanto oscuros como hermosos.
+            Adéntrate en la historia de uno de los bosques más antiguos y misteriosos de la Tierra Media. Un lugar lleno
+            de secretos, tanto oscuros como hermosos.
           </p>
           <a href="#" class="block mt-6 text-yellow-500 font-semibold hover:text-yellow-400"><b>Leer más »</b></a>
         </div>
@@ -108,26 +94,119 @@
       <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
         <div class="p-6">
           <h4 class="text-2xl font-bold">Sobre el Autor</h4>
-          <p class="text-yellow-100 mt-2">Un viajero en la Tierra Media, compartiendo la historia, cultura y magia de este mundo fantástico.</p>
+          <p class="text-yellow-100 mt-2">Un viajero en la Tierra Media, compartiendo la historia, cultura y magia de
+            este mundo fantástico.</p>
         </div>
       </div>
 
+      <!-- Publicaciones Populares -->
       <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700">
         <div class="p-6">
-          <h4 class="text-2xl font-bold">Categorías Populares</h4>
+          <h4 class="text-2xl font-bold text-yellow-200">Publicaciones Populares</h4>
         </div>
-        <ul class="divide-y divide-yellow-700 text-yellow-100">
-          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
-            <span class="text-lg font-semibold">Aventura</span>
+        <ul class="space-y-4 p-6 text-yellow-100">
+          <!-- Publicación 1 -->
+          <li class="flex items-start space-x-4 border-b border-yellow-700 pb-4">
+            <!-- Imagen en miniatura -->
+            <img src="Imagenes/rivendell.jpg" alt="Rivendel"
+              class="w-28 h-28 object-cover rounded-lg border border-yellow-700">
+
+            <!-- Contenido del post -->
+            <div class="flex flex-col space-y-1">
+              <!-- Etiquetas o categorías -->
+              <div class="flex space-x-2">
+                <span class="text-xs font-semibold text-yellow-300 bg-yellow-800 rounded px-2 py-1">Aventura</span>
+                <span class="text-xs font-semibold text-yellow-300 bg-yellow-800 rounded px-2 py-1">Épica</span>
+              </div>
+
+              <!-- Título del post -->
+              <h5 class="text-lg font-bold hover:text-yellow-400 cursor-pointer">La leyenda de Rivendel</h5>
+
+              <!-- Autor del post -->
+              <p class="text-sm text-yellow-400">Por Aragorn Telcontar</p>
+            </div>
           </li>
-          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
-            <span class="text-lg font-semibold">Épica</span>
+
+          <!-- Publicación 2 -->
+          <li class="flex items-start space-x-4 border-b border-yellow-700 pb-4">
+            <!-- Imagen en miniatura -->
+            <img src="Imagenes/bosqueNegro2.jpg" alt="Bosque Negro"
+              class="w-28 h-28 object-cover rounded-lg border border-yellow-700">
+
+            <!-- Contenido del post -->
+            <div class="flex flex-col space-y-1">
+              <!-- Etiquetas o categorías -->
+              <div class="flex space-x-2">
+                <span class="text-xs font-semibold text-yellow-300 bg-yellow-800 rounded px-2 py-1">Magia</span>
+              </div>
+
+              <!-- Título del post -->
+              <h5 class="text-lg font-bold hover:text-yellow-400 cursor-pointer">El Bosque Negro</h5>
+
+              <!-- Autor del post -->
+              <p class="text-sm text-yellow-400">Por Galadriel</p>
+            </div>
           </li>
-          <li class="flex items-center p-4 hover:bg-yellow-800 hover:bg-opacity-20">
-            <span class="text-lg font-semibold">Magia</span>
+
+          <!-- Publicación 3 -->
+          <li class="flex items-start space-x-4">
+            <!-- Imagen en miniatura -->
+            <img src="Imagenes/mordor.jpg" alt="Mordor"
+              class="w-28 h-28 object-cover rounded-lg border border-yellow-700">
+
+            <!-- Contenido del post -->
+            <div class="flex flex-col space-y-1">
+              <!-- Etiquetas o categorías -->
+              <div class="flex space-x-2">
+                <span class="text-xs font-semibold text-yellow-300 bg-yellow-800 rounded px-2 py-1">Oscuridad</span>
+                <span class="text-xs font-semibold text-yellow-300 bg-yellow-800 rounded px-2 py-1">Épica</span>
+              </div>
+
+              <!-- Título del post -->
+              <h5 class="text-lg font-bold hover:text-yellow-400 cursor-pointer">Las tierras de Mordor</h5>
+
+              <!-- Autor del post -->
+              <p class="text-sm text-yellow-400">Por Sauron</p>
+            </div>
           </li>
         </ul>
       </div>
+
+      <!-- Sección de Etiquetas -->
+      <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-yellow-700 mt-6">
+        <div class="p-6">
+          <h4 class="text-2xl font-bold text-yellow-200">Etiquetas</h4>
+        </div>
+        <div class="p-6">
+          <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-yellow-100">
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Aventura</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Épica</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Magia</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Oscuridad</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Historia</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Leyendas</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Criaturas</li>
+            <li
+              class="text-sm font-semibold bg-yellow-800 hover:bg-yellow-700 text-yellow-300 rounded-lg px-3 py-1 cursor-pointer text-center">
+              Lugares</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 
