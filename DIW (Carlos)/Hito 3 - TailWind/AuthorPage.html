@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=MedievalSharp&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gray-800 font-['Cinzel']">
+
+    <!-- Encabezado -->
+    <header
+        class="flex justify-between items-center sticky top-0 z-20 py-4 bg-gray-900 border-b-4 border-yellow-800 shadow-lg">
+        <div class="flex items-center ml-6 space-x-3 cursor-pointer">
+            <img src="Imagenes/Logoweb.png" class="w-24 h-auto rounded-lg border-2 border-yellow-800">
+            <span class="text-3xl text-yellow-200 tracking-widest">The Beauty of Middle-Earth</span>
+        </div>
+        <ul class="flex mr-10 font-semibold">
+            <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+                <a class="text-yellow-100 hover:text-yellow-400" href="#">Home</a>
+            </li>
+            <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+                <a class="text-yellow-100 hover:text-yellow-400" href="#">Categorías</a>
+            </li>
+            <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+                <a class="text-yellow-100 hover:text-yellow-400" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="mr-6 p-1 border-b-2 border-transparent hover:border-yellow-600">
+                <a class="text-yellow-100 hover:text-yellow-400" href="#">Contacto</a>
+            </li>
+        </ul>
+    </header>
+
+    <hr id="about">
+
+    <!-- About Section -->
+    <div class="w-full py-16 bg-gray-900 text-yellow-200 text-center">
+        <h3 class="text-4xl font-bold mb-4">Sobre el Autor, Bilbo Bolsón</h3>
+        <img src="Imagenes/bilbobolson.jpg" alt="Bilbo Bolsón"
+            class="mx-auto rounded-lg shadow-lg w-3/4 sm:w-1/2 md:w-1/3 mb-6">
+        <div class="px-6">
+            <h4 class="text-2xl font-semibold mb-2">Un Hobbit con Pasión por la Aventura</h4>
+            <h6 class="text-lg italic text-yellow-400 mb-4">"La mejor historia es la que aún no se ha contado."</h6>
+            <p class="mb-6">Nacido en la Comarca y conocido por sus extraordinarias aventuras, Bilbo Bolsón es más que
+                un simple hobbit. Amante de las historias, los mapas y las leyendas de la Tierra Media, sus experiencias
+                han sido fuente de inspiración para exploradores y aventureros de todas las edades. Con un amor profundo
+                por los cuentos de elfos, dragones y secretos ocultos, Bilbo está siempre dispuesto a compartir sus
+                relatos con el mundo.</p>
+
+            <!-- Redes Sociales -->
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="text-yellow-500 hover:text-yellow-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-yellow-500 hover:text-yellow-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-yellow-500 hover:text-yellow-400 text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-yellow-500 hover:text-yellow-400 text-2xl"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <a href="#"
+                class="inline-block bg-yellow-800 text-yellow-100 px-4 py-2 rounded-lg shadow-md hover:bg-yellow-700">Contactar
+                al Autor</a>
+
+            <!-- Logros Destacados -->
+            <div class="mt-8">
+                <h5 class="text-xl font-semibold mb-2">Logros Destacados:</h5>
+                <ul class="list-disc list-inside text-left mx-auto max-w-2xl">
+                    <li>Autor de “El Hobbit: Una Aventura Inesperada”.</li>
+                    <li>Orador en conferencias sobre mitología de la Tierra Media.</li>
+                    <li>Reconocido por su valentía en el Consejo de Elrond.</li>
+                </ul>
+            </div>
+
+            <!-- Artículos Populares -->
+            <div class="mt-8">
+                <h5 class="text-xl font-semibold mb-4">Artículos Populares:</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="w-full bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                        <img src="Imagenes/rivendell.jpg" alt="Articulo 1" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h6 class="text-lg font-semibold text-yellow-200 mb-2">Los Secretos de Rivendel: Historia y
+                                Magia</h6>
+                            <p class="text-yellow-400 text-sm">Descubre la magia oculta y las historias que se
+                                entrelazan en Rivendel, hogar de los elfos.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                        <img src="Imagenes/Mount_Doom.webp" alt="Articulo 2" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h6 class="text-lg font-semibold text-yellow-200 mb-2">Las Aventuras de un Hobbit: De la
+                                Comarca al Monte del Destino</h6>
+                            <p class="text-yellow-400 text-sm">Sigue los pasos de Bilbo Bolsón, desde la tranquila
+                                Comarca hasta los desafíos del Monte del Destino.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="w-full bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                        <img src="Imagenes/consejoElrond.jpg" alt="Articulo 3" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h6 class="text-lg font-semibold text-yellow-200 mb-2">El Consejo de Elrond: El Encuentro de
+                                los Grandes Héroes</h6>
+                            <p class="text-yellow-400 text-sm">Revive el histórico Consejo de Elrond, donde los destinos
+                                de la Tierra Media se deciden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cita Inspiradora -->
+            <div class="mt-8">
+                <h6 class="text-lg italic text-yellow-400 mb-4">"La aventura es solo un sueño para aquellos que se
+                    atreven a soñar."</h6>
+            </div>
+            <a href="MainPage.html"
+                class="inline-block bg-yellow-800 text-yellow-100 px-4 py-2 rounded-lg shadow-md hover:bg-yellow-700 mt-6">
+                <i class="fas fa-home mr-2"></i> Volver a la Página Principal
+            </a>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-900 text-yellow-200 py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p>Contacto: TheBeautyofMiddleEarth@lordofthering.org</p>
+            <div class="flex justify-center mt-4 space-x-4">
+                <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-yellow-200 hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mt-4 text-sm">© 2024 The Beauty of Middle-Earth. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
