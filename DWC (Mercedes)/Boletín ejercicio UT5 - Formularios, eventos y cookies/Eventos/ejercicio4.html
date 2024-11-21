@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación con funciones, arrays y objetos definidos por el usuario </title>
+</head>
+
+<body>
+    Realizar un examen tipo test online de 2 preguntas con 4 respuestas (sólo se puede seleccionar 1).
+    Cuando el usuario seleccione una respuesta, hacerle saber si es correcta o incorrecta y mostrar la respuesta
+    correcta
+    en un campo de texto aparte.
+
+    <h1>Examen tipo test</h1>
+    <div id="quiz">
+        <div class="question" data-correct-answer="JavaScript">
+            <p>1. ¿Cuál es el lenguaje de programación que se ejecuta en el navegador?</p>
+            <form>
+                <input type="radio" name="q1" value="Python" id="q1a1"> <label for="q1a1">Python</label><br>
+                <input type="radio" name="q1" value="C++" id="q1a2"> <label for="q1a2">C++</label><br>
+                <input type="radio" name="q1" value="JavaScript" id="q1a3"> <label for="q1a3">JavaScript</label><br>
+                <input type="radio" name="q1" value="Java" id="q1a4"> <label for="q1a4">Java</label><br>
+            </form>
+            <button class="check-answer">Responder</button>
+            <p class="result"></p>
+        </div>
+        <div class="question" data-correct-answer="<script>">
+            <p>2. ¿Qué etiqueta HTML se utiliza para incluir un script?</p>
+            <form>
+                <input type="radio" name="q2" value="<div>" id="q2a1"> <label for="q2a1">&lt;div&gt;</label><br>
+                <input type="radio" name="q2" value="<style>" id="q2a2"> <label for="q2a2">&lt;style&gt;</label><br>
+                <input type="radio" name="q2" value="<script>" id="q2a3"> <label for="q2a3">&lt;script&gt;</label><br>
+                <input type="radio" name="q2" value="<head>" id="q2a4"> <label for="q2a4">&lt;head&gt;</label><br>
+            </form>
+            <button class="check-answer">Responder</button>
+            <p class="result"></p>
+        </div>
+    </div>
+    <script src="ejercicio4.js"></script>
+</body>
+
+</html>
