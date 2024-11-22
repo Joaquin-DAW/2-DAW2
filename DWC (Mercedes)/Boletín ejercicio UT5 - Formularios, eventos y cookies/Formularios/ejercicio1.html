@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación con funciones, arrays y objetos definidos por el usuario </title>
+    <script src="ejercicio2.js" defer></script>
+</head>
+<body>
+    Crea usando HTML5 (sin JS) un formulario de registro en el que se pidan y validen Nombre, Apellidos, Nombre de usuario, Contraseña 
+    (sólo números, letras y estos caracteres especiales !*$%), Fecha Nac, Sexo, Móvil, Correo Electrónico, Ubicación.
+    <form method="post">
+        <ul>
+          <li>
+            <label for="name">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+            <label for="name"></label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required/>
+          </li>
+          <li>
+            <label for="mail">Nombre de usuario:</label>
+            <input type="text" id="name" name="user_name" required/>
+          </li>
+          <li>
+            <label for="msg">Contraseña:</label>
+            <input type="password" id="password" name="password" 
+               pattern="[A-Za-z0-9!*$%]+" required>
+          </li>
+          <li>
+            <label for="msg">Confirmar contraseña:</label>
+            <input type="password" id="password" name="password" required/>
+          </li>
+          <li>
+            <label for="msg">Fecha nacimiento:</label>
+            <input type="date" id="date" name="date" required onchange="calcularEdad()"/>
+          </li>
+          <li>
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" readonly/>
+          </li>
+          <li>
+          <label for="lang">Género</label>
+            <select name="genero" id="genero" required>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="otro">Otro</option>
+            </select>
+          </li>
+          <li>
+            <label for="msg">Teléfono móvil:</label>
+            <input type="number" id="telefono" name="telefono" required/>
+          </li>
+          <li>
+            <label for="mail">Correo electrónico:</label>
+            <input type="email" id="mail" name="user_mail" required />
+          </li>
+        </ul>
+        <input type="submit" id="submit" value="Enviar con submit" onclick="enviarDatosANuevaVentana()">
+      </form>
+      <div id="resultado"></div>
+</body>
+</html>

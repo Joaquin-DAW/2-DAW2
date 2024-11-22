@@ -1,3 +1,5 @@
+window.addEventListener("load", inicializar);
+
 // Seleccionamos todos los botones "Responder"
 const buttons = document.querySelectorAll('.check-answer');
 

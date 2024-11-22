@@ -12,6 +12,8 @@ class Cliente {
         for (let pendiente of this.citasPendientes) {
             if (pendiente.fechaHora.toDateString() == fechaCita) {
                 console.log("Ya tienes cita.");
+                this.citasPendientes.push(cita);
+                console.log("Cita agregada.");
             }
         }
         
@@ -19,10 +21,5 @@ class Cliente {
         if (cita.fechaHora <= ahora) {
             console.log("No se pueden agregar citas.");
         }
-        
-        this.citasPendientes.push(cita);
-        console.log("Cita agregada.");
     }
-
-    
 }

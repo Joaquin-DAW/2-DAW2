@@ -1,34 +1,22 @@
-// Seleccionamos los elementos del formulario
-const smsText = document.getElementById("smsText");
-const charCounter = document.getElementById("charCounter");
-const smsForm = document.getElementById("smsForm");
+window.addEventListener("load", inicializar);
 
-// Expresión regular para permitir sólo caracteres alfanuméricos y signos de puntuación
-const validCharacters = /^[a-zA-Z0-9 .,!?¡¿'"()\-:;@#]+$/;
-
-// Función para actualizar el contador de caracteres
-function updateCharCounter() {
-  const remainingChars = 145 - smsText.value.length;
-  charCounter.textContent = `${remainingChars} caracteres restantes.`;
-
-  // Si se encuentra un carácter inválido, resaltar el error
-  if (!validCharacters.test(smsText.value) && smsText.value !== "") {
-    charCounter.classList.add("error");
-    charCounter.textContent = "Caracteres no permitidos detectados.";
-  } else {
-    charCounter.classList.remove("error");
-  }
+function inicializar (){
+  document.getElementById('sms').addEventListener('input', entrada);
 }
 
-// Prevenir el envío si hay caracteres inválidos
-smsForm.addEventListener("submit", (event) => {
-  if (!validCharacters.test(smsText.value)) {
-    event.preventDefault();
-    alert("El mensaje contiene caracteres no permitidos.");
-  } else {
-    alert("Mensaje enviado correctamente.");
-  }
-});
+function entrada (){
+  let txt=document.getElementById('sms').value;
+  let rg = new RegExp(/^[a-zA-Z0-9 .,!?¡¿'"()\-:;@#]+$/);
+  let max = 145;
+  let long = txt.length;
+  let quedan = max -long;
+  document.getElementById('texto').textContent = "Quedan "+quedan+" caracteres";
 
-// Actualizar el contador en tiempo real
-smsText.addEventListener("input", updateCharCounter);
+  if(!rg.test(txt)){
+    document.getElementById('btn').setAttribute('disable', true);
+    document.getElementById('error').textContent = "No es un carácter alfanumérico";
+  }else{
+    document.getElementById('btn').removeAttribute('disable');
+    document.getElementById('error').textContent = "";
+  }
+}
