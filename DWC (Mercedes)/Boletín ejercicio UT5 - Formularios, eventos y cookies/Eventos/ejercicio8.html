@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validación de Formulario</title>
-    <script src="ejercicio8.js"></script>
+    <title>Programación con funciones, arrays y objetos definidos por el usuario </title>
+    <script src="ejercicio2.js" defer></script>
 </head>
-
 <body>
-    <h1>Validación de Formulario</h1>
-    <form id="validationForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" required>
-        <span id="nameError"></span><br><br>
-        <label for="username">Usuario:</label>
-        <input type="text" id="username"><br>
-        <span id="usernameFeedback"></span><br>
+    -Usar JS para validar el formulario de la figura y evitar el envío hasta que esté correcto.
+    -Añadir un botón de reseteo de formulario con confirmación antes de borrar.
+    -Usar   el   evento   de   entrada   de   teclado   para   validar   oonthefly   (sobre   la   marcha)   en   los campos 
+    de textos del formulario de la figura.
 
-        <label for="email">Correo:</label>
-        <input type="email" id="email" required>
-        <span id="emailError"></span><br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-    <form id="resetForm">
-        <input type="text" id="dataField" placeholder="Escribe algo">
-        <button type="button" id="resetButton">Resetear</button>
-    </form>
+    <form method="post">
+        <ul>
+          <li>
+            <label for="name">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+            <label for="name"></label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required/>
+          </li>
+          <li>
+            <label for="mail">Nombre de usuario:</label>
+            <input type="text" id="name" name="user_name" required/>
+          </li>
+          <li>
+            <label for="msg">Contraseña:</label>
+            <input type="password" id="password" name="password" 
+               pattern="[A-Za-z0-9!*$%]+" required>
+          </li>
+          <li>
+            <label for="msg">Confirmar contraseña:</label>
+            <input type="password" id="password" name="password" required/>
+          </li>
+          <li>
+            <label for="msg">Fecha nacimiento:</label>
+            <input type="date" id="date" name="date" required onchange="calcularEdad()"/>
+          </li>
+          <li>
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" readonly/>
+          </li>
+          <li>
+          <label for="lang">Género</label>
+            <select name="genero" id="genero" required>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="otro">Otro</option>
+            </select>
+          </li>
+          <li>
+            <label for="msg">Teléfono móvil:</label>
+            <input type="number" id="telefono" name="telefono" required/>
+          </li>
+          <li>
+            <label for="mail">Correo electrónico:</label>
+            <input type="email" id="mail" name="user_mail" required />
+          </li>
+        </ul>
+        <input type="submit" id="submit" value="Enviar con submit" onclick="enviarDatosANuevaVentana()">
+      </form>
+      <div id="resultado"></div>
 </body>
-
 </html>

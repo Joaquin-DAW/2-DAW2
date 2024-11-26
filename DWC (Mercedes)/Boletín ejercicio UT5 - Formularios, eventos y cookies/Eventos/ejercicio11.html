@@ -9,18 +9,20 @@
 </head>
 
 <body>
-    Realizar un examen tipo test online de 2 preguntas con 4 respuestas (sólo se puede seleccionar 1).
-    Cuando el usuario seleccione una respuesta, hacerle saber si es correcta o incorrecta y mostrar la respuesta
-    correcta
-    en un campo de texto aparte.
+    Crear   un   formulario   que   contiene   dos   campos   de   texto   contraseña.   Cuando   el   usuario   sale   de   cada   campo   
+    de   texto,   utilice   el   controlador   de eventos   para   Blur   y   comprobar   si   el   usuario   ha   introducido   nada   en   
+    el   campo   respectivo. Si   el   usuario   no   lo   hizo,   enviar   una   alerta   para   decírselo,   y   utilizar   el   método   
+    focus()   para devolver el foco al campo de texto que el usuario acaba de abandonar.
 
-    <h1>Validación de Contraseñas</h1>
+    <h1>Validación de contraseñas</h1>
     <form>
         <label for="password1">Contraseña:</label>
-        <input type="password" id="password1" placeholder="Contraseña"><br><br>
+        <input type="password" id="password1" data-error="error-password1">
+        <span id="error-password1" class="error"></span><br><br>
 
         <label for="password2">Repite la contraseña:</label>
-        <input type="password" id="password2" placeholder="Repite la contraseña"><br><br>
+        <input type="password" id="password2" data-error="error-password2">
+        <span id="error-password2" class="error"></span><br><br>
     </form>
     </form>
 </body>
