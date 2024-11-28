@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies </title>
+    <script src="ejercicio14.js"></script>
+</head>
+
+<body>
+    Crear   un   formulario   que   contiene   un   conjunto   de   casillas   de   verificación   con   diferentes tipos   de   cafés   espresso,   
+    cappuccino,   moka,   y   así   sucesivamente.   Pida   al   usuario su   nombre   y   número   de   habitación   y   seleccionar   un   tipo   
+    de   café.   Indicar   al   usuario   que va   a   enviar   el   café   a   su   número   de   habitación.   Cree   las   cookie   para   recordar   
+    las preferencias   del   usuario.   La   próxima   vez   que   el   usuario  entre en la   página, en introduzca su nombre de usuario y habitación, 
+    se mostrará su café favorito. Después de haber pedido 3 cafés, se le dirá que hay una tarifa especial y su próximo café será gratuito.
+
+    <h1>Formulario de Pedido de Café</h1>
+    <p>Por favor, complete la siguiente información para enviar su café a su habitación.</p>
+
+    <form id="formulario_cafe">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="habitacion">Número de habitación:</label><br>
+        <input type="text" id="habitacion" name="habitacion" required><br><br>
+
+        <label>Seleccione su tipo de café:</label><br>
+        <input type="checkbox" id="espresso" class="cafe" value="Espresso">
+        <label for="espresso">Espresso</label><br>
+        
+        <input type="checkbox" id="cappuccino" class="cafe" value="Cappuccino">
+        <label for="cappuccino">Cappuccino</label><br>
+        
+        <input type="checkbox" id="moka" class="cafe" value="Moka">
+        <label for="moka">Moka</label><br>
+
+        <input type="checkbox" id="caramel_macchiato" class="cafe" value="Caramel_Macchiato">
+        <label for="caramel_macchiato">Caramel Macchiato</label><br>
+        
+        <input type="checkbox" id="otro" class="cafe" value="Otro">
+        <label for="otro">Otro</label><br><br>
+
+        <p>Nota: Su café será enviado a su número de habitación.</p>
+        
+        <input type="submit" value="Enviar Pedido">
+
+</body>
+
+</html>
