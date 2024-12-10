@@ -72,6 +72,66 @@ header {
     background-color: #0B4B1C;
 }
 
+/* Responsive design for the header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li a {
+        margin: 5px 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sesion {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .login button, .registro button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .menu ul {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+
+    .sesion {
+        margin-top: 5px;
+    }
+
+    .login button, .registro button {
+        padding: 8px 10px;
+    }
+}
+
 /*Hero-banner*/
 .hero-banner{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(12, 191, 223, 0) 80%), /* Gradiente en la parte superior */
@@ -354,7 +414,6 @@ p {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     opacity: 0;
     transform: translateY(20px);
@@ -367,78 +426,6 @@ p {
     transform: translateY(0);
   }
 
-  .activity-card {
-    width: 250px;
-    height: 300px;
-    background-color: #f5f5f5;
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.activity-card:hover {
-    transform: scale(1.05);
-    background-color: #007bff; 
-}
-
-.activity-content {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-}
-
-.activity-title {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.activity-short-desc {
-    font-size: 1rem;
-    color: #555;
-}
-
-.activity-more-info {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: top 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.activity-card:hover .activity-more-info {
-    top: 0;
-    opacity: 1;
-    visibility: visible;
-}
-
-.activity-more-info p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.activity-more-info button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #ff4500;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.activity-more-info button:hover {
-    background-color: #ff6347;
-}
 
 /* Seccion guias */
 .guides-section{

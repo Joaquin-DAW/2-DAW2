@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Tienda de la Tierra Media</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="sticky-top bg-dark border-bottom border-4 border-warning shadow-lg py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center cursor-pointer">
+                <img src="Imagenes/Logoweb.png" class="rounded border border-2 border-warning me-3"
+                    style="width: 96px; height: auto;">
+                <span class="text-warning text-uppercase fs-3">The Beauty of Middle-Earth</span>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-warning" href="StoreHomePage.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="CartPage.html">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="CheckoutPage.html">Pagar</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Customer Information Form -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Información del Cliente</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-dark">Nombre Completo</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label text-dark">Dirección de Envío</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-dark">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label text-dark">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                    </form>
+                </div>
+                <!-- Payment Information -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Información de Pago</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label text-dark">Nombre en la tarjeta</label>
+                            <input type="text" class="form-control" id="cardName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label text-dark">Número de tarjeta</label>
+                            <input type="text" class="form-control" id="cardNumber" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expirationDate" class="form-label text-dark">Fecha de Expiración</label>
+                            <input type="month" class="form-control" id="expirationDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cvc" class="form-label text-dark">CVC</label>
+                            <input type="text" class="form-control" id="cvc" required>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row mt-4">
+                    <!-- Shipping Options -->
+                    <div class="col-md-6">
+                        <h2 class="mb-4">Opciones de Envío</h2>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shippingMethod" id="standardShipping"
+                                value="standard" checked>
+                            <label class="form-check-label" for="standardShipping">
+                                Envío Estándar (50 monedas de oro, 5-7 días)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shippingMethod" id="expressShipping"
+                                value="express">
+                            <label class="form-check-label" for="expressShipping">
+                                Envío Exprés (200 monedas de oro, 1-2 días)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Order Review -->
+                    <div class="col-md-6">
+                        <h2 class="mb-4">Resumen del Pedido</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Productos en el carrito</h5>
+                                <ul class="list-group list-group-flush">
+                                    <!-- Ejemplo de productos en el carrito, puedes reemplazarlos con los datos dinámicos -->
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Producto Anillo Único</span>
+                                            <span>9999 monedas de oro</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Producto Espada de Élfica</span>
+                                            <span>750 monedas de oro</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="mt-4">
+                                    <h5>Resumen de Costos</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span>Subtotal</span>
+                                            <span>1749 monedas de oro</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span>Costo de Envío</span>
+                                            <span>50 monedas de oro</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <h5>Total del Pedido</h5>
+                                        <p class="text-warning fs-4">1799 monedas de oro</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="#" class="btn btn-outline-secondary">Seguir comprando</a>
+                    <button class="btn btn-warning">Completar Compra</button>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-warning py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Correo: soporte@tierramedia.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-warning me-3">Facebook</a>
+                    <a href="#" class="text-warning me-3">Twitter</a>
+                    <a href="#" class="text-warning">Instagram</a>
+                </div>
+            </div>
+            <p class="text-center mt-3">© 2024 Tienda de la Tierra Media. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

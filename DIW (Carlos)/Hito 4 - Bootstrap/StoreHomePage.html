@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de la Tierra Media</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="sticky-top bg-dark border-bottom border-4 border-warning shadow-lg py-3">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex align-items-center cursor-pointer">
+                <img src="Imagenes/Logoweb.png" class="rounded border border-2 border-warning me-3"
+                    style="width: 96px; height: auto;">
+                <span class="text-warning text-uppercase fs-3">The Beauty of Middle-Earth</span>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="CartPage.html">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="CheckoutPage.html">Pagar</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="bg-light text-center py-5">
+        <div class="container">
+            <h2 class="display-4">Bienvenido a la Tierra Media</h2>
+            <p class="lead">Descubre los tesoros más preciados de la Tierra Media. ¡Ofertas especiales para hobbits y
+                elfos!</p>
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Imagenes/One_ring.png" class="w-50" alt="Banner 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/aragorn_sword.png" class="w-75"
+                            alt="Banner 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Mapa_tierra_media.webp" class="w-50"
+                            alt="Banner 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="mb-4 text-center">Productos Destacados</h3>
+            <div class="row">
+                <!-- Sidebar for Filters -->
+                <div class="col-md-3 mb-4">
+                    <h4 class="mb-3">Filtros de Productos</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="category" class="form-label text-dark">Categoría</label>
+                            <select id="category" class="form-select bg-light text-dark border-dark">
+                                <option selected class="bg-light text-dark">Elige una categoría</option>
+                                <option class="bg-light text-dark">Armas</option>
+                                <option class="bg-light text-dark">Ropa</option>
+                                <option class="bg-light text-dark">Comida</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="priceRange" class="form-label text-dark">Rango de Precio</label>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-dark">0 monedas</span>
+                                <span class="text-dark">1000 monedas</span>
+                            </div>
+                            <input type="range" id="priceRange" class="form-range border-dark">
+                        </div>
+                        <div class="mb-3">
+                            <label for="popularity" class="form-label text-dark">Popularidad</label>
+                            <select id="popularity" class="form-select bg-light text-dark border-dark">
+                                <option selected class="bg-light text-dark">Más Vendidos</option>
+                                <option class="bg-light text-dark">Novedades</option>
+                                <option class="bg-light text-dark">Mejor Valorados</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100">Aplicar Filtros</button>
+                    </form>
+                </div>
+
+                <!-- Products -->
+                <div class="col-md-9">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <!-- Producto 1 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/One_ring.png" class="card-img-top"
+                                    alt="Anillo Único">
+                                <div class="card-body">
+                                    <h5 class="card-title">Anillo Único</h5>
+                                    <p class="card-text">Precio: 9999 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 2 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/aragorn_sword.png"
+                                    class="card-img-top" alt="Espada de Aragorn">
+                                <div class="card-body">
+                                    <h5 class="card-title">Espada de Aragorn</h5>
+                                    <p class="card-text">Precio: 750 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 3 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/lembas_bread.webp" class="card-img-top"
+                                    alt="Lembas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lembas</h5>
+                                    <p class="card-text">Precio: 50 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 4 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/capa_elfo.png" class="card-img-top"
+                                    alt="Capa de Elfo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Capa de Elfo</h5>
+                                    <p class="card-text">Precio: 300 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 5 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/Mapa_tierra_media.webp"
+                                    class="card-img-top" alt="Mapa de la Tierra Media">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mapa de la Tierra Media</h5>
+                                    <p class="card-text">Precio: 150 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 6 -->
+                        <div class="col">
+                            <div class="card">
+                                <img src="Imagenes/gimli_axe.jpg" class="card-img-top"
+                                    alt="Hacha de Gimli">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hacha de Gimli</h5>
+                                    <p class="card-text">Precio: 500 monedas de oro</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="IndividualProductPage.html" class="btn btn-primary">Ver Detalles</a>
+                                        <button class="btn btn-primary">Añadir al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-warning py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Correo: soporte@tierramedia.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-warning me-3">Facebook</a>
+                    <a href="#" class="text-warning me-3">Twitter</a>
+                    <a href="#" class="text-warning">Instagram</a>
+                </div>
+            </div>
+            <p class="text-center mt-3">© 2024 Tienda de la Tierra Media. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
