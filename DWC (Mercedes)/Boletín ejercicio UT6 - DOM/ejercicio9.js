@@ -36,6 +36,16 @@
             elemento2_ul.appendChild(elemento2_li);
         });
 
+        imagen.addEventListener("click", () => {
+            if (elemento_p.style.display == "none" && elemento2_ul.style.display == "none") {
+                elemento_p.style.display = "block";  // Mostrar la descripción
+                elemento2_ul.style.display = "block"; // Mostrar las especificaciones
+            } else {
+                elemento_p.style.display = "none";   // Ocultar la descripción
+                elemento2_ul.style.display = "none"; // Ocultar las especificaciones
+            }
+        });
+
         elemento1_li.appendChild(imagen);
         elemento1_li.appendChild(elemento_p);
         elemento1_li.appendChild(elemento2_ul);
