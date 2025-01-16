@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Examen</title>
+    <script src="ejercicio2.js" defer></script>
+</head>
+<body>
+    Crea en JavaScript tradicional ( Vanilla JS ) un formulario de login para la
+    empresa DWC con dos campos, correo electrónico y departamento al que pertenece.
+    Realiza una validación dónde el correo debe ser válido y corporativo (dwc.com). Si la
+    validación es correcta se enviarán los datos y se creará una cookie con el email y el
+    departamento. La próxima vez que el usuario cargue la página, se rellenarán
+    automáticamente los campos del formulario.
+
+    Realiza las modificaciones necesarias para que el almacenamiento del
+    correo y el email no se pase al servidor en cada petición y el almacenamiento dure sólo
+    durante la sesión abierta en el navegador.
+
+    <h1>Formulario de Login - DWC</h1>
+    <form id="formularioLogin">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@dwc.com">
+        <br><br>
+        <label for="departamento">Departamento:</label>
+        <input type="text" id="departamento" name="departamento" placeholder="Departamento">
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

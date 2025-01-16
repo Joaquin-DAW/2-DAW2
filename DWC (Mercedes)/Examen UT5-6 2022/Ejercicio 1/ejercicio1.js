@@ -90,6 +90,9 @@ function crearEstructura() {
         escudo2.appendChild(imagen2);
 
         var listaD = document.createElement("ul");
+        listaD.style.overflow = "hidden"; // Oculta contenido extra
+        listaD.style.height = "0"; // Inicialmente invisible
+        listaD.style.transition = "height 0.5s ease"; // Deslizamiento suave
 
         var lista1 = document.createElement("li");
         var lista2 = document.createElement("li");
@@ -120,6 +123,79 @@ function crearEstructura() {
         equipos.appendChild(listaD);
 
         partidos.appendChild(equipos);
-    });
 
+        //let hideTimeout; // Variable para almacenar el setTimeout
+
+        let intervalId;
+
+         // Añade eventos al pasar el ratón por encima de las imágenes
+         imagen1.addEventListener("mouseover", () => {
+            mostrarListaDeslizar(listaD);
+            //clearTimeout(hideTimeout); // Limpiar cualquier timeout pendiente
+            clearInterval(intervalId);
+            //hideTimeout = setTimeout(() => {
+            intervalId = setInterval(() => {
+                ocultarListaDeslizar(listaD);
+            }, 3000); // Ocultar después de 3 segundos
+        });
+
+        /*imagen1.addEventListener("mouseleave", () => {
+            clearTimeout(hideTimeout); // Limpiar el timeout si el ratón sale
+            ocultarListaDeslizar(listaD);
+        });*/
+
+        imagen2.addEventListener("mouseover", () => {
+            mostrarListaDeslizar(listaD);
+            //clearTimeout(hideTimeout); // Limpiar cualquier timeout pendiente
+            clearInterval(intervalId);
+            //hideTimeout = setTimeout(() => {
+            intervalId = setInterval(() => {
+                ocultarListaDeslizar(listaD);
+            }, 3000); // Ocultar después de 3 segundos
+        });
+
+        /*imagen2.addEventListener("mouseleave", () => {
+            clearTimeout(hideTimeout); // Limpiar el timeout si el ratón sale
+            ocultarListaDeslizar(listaD);
+        });*/
+
+        resultado1.addEventListener("mouseover", () => {
+            aumentarFuente(resultado1);
+        });
+        
+        resultado1.addEventListener("mouseout", () => {
+            restaurarFuente(resultado1);
+        });
+        
+        resultado2.addEventListener("mouseover", () => {
+            aumentarFuente(resultado2);
+        });
+        
+        resultado2.addEventListener("mouseout", () => {
+            restaurarFuente(resultado2);
+        });
+    });
+}
+
+// Función para mostrar la lista deslizándose
+function mostrarListaDeslizar(lista) {
+    lista.style.height = lista.scrollHeight + "px"; // Ajusta la altura al contenido
+}
+
+// Función para ocultar la lista deslizándose
+function ocultarListaDeslizar(lista) {
+    lista.style.height = "0"; // Oculta ajustando la altura a 0
+}
+
+
+// Función para aumentar el tamaño de la fuente en 2px
+function aumentarFuente(elemento) {
+    let tamañoActual = elemento.style.fontSize || "16px"; // Valor predeterminado si no tiene estilo en línea
+    let nuevoTamaño = parseInt(tamañoActual) + 20 + "px"; // Convierte a número, suma y vuelve a 'px'
+    elemento.style.fontSize = nuevoTamaño; // Aplica el nuevo tamaño
+}
+
+// Función para restaurar el tamaño original de la fuente
+function restaurarFuente(elemento) {
+    elemento.style.fontSize = "";
 }
