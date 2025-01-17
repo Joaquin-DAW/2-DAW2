@@ -199,3 +199,115 @@ function aumentarFuente(elemento) {
 function restaurarFuente(elemento) {
     elemento.style.fontSize = "";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener("load", inicializar, false);
+
+function inicializar() {
+    crearEstructura();  // Crear la estructura solo al cargar la página
+}
+
+const jsonViaje = [
+    {"clase_pais": "usa", "ciudad_h2": "NewYork, NY", "detalle_precio_total": "1,899", "detalle_num_noches": 7, "precio_noche": 275, "ruta_imagen": "./photos/newyork.jpg", "pie_imagen": "Puente Brooklyn"},
+    {"clase_pais": "paris", "ciudad_h2": "Paris, Francia", "detalle_precio_total": "1,499", "detalle_num_noches": 5, "precio_noche": 300, "ruta_imagen": "./photos/paris.jpg", "pie_imagen": "Notre Dame de Paris"},
+    {"clase_pais": "uk", "ciudad_h2": "Londres, UK", "detalle_precio_total": "2,199", "detalle_num_noches": 5, "precio_noche": 440, "ruta_imagen": "./photos/london.jpg", "pie_imagen": "Torre de Londres"}
+];
+
+function crearEstructura() {
+    var titulo = document.getElementById("mostrar");
+    
+    // Escuchar el clic en el título para alternar el contenido
+    titulo.addEventListener("click", () => {
+        ocultarContenido(titulo);
+    });
+}
+
+function ocultarContenido(titulo) {
+    // Si no existe la lista en el DOM, creamos todo el contenido
+    if (!lista) {
+        lista = document.createElement("ul");  // Crear lista de viajes
+        jsonViaje.forEach(item => {
+            var clase = document.createElement("li");
+            clase.className = "viaje " + item.clase_pais;
+
+            var ciudad = document.createElement("h2");
+            ciudad.textContent = item.ciudad_h2;
+            clase.appendChild(ciudad);
+
+            var detalle = document.createElement("span");
+            detalle.className = "detalle";
+            detalle.textContent = item.detalle_precio_total + " por " + item.detalle_num_noches + " noches";
+            clase.appendChild(detalle);
+
+            var reserva = document.createElement("button");
+            reserva.className = "reserva";
+            reserva.textContent = "Resérvalo ya!";
+            clase.appendChild(reserva);
+
+            var fotos = document.createElement("ul");
+            fotos.className = "fotos";
+            clase.appendChild(fotos);
+
+            var listaFotos = document.createElement("li");
+            fotos.appendChild(listaFotos);
+
+            var imagen = document.createElement("img");
+            imagen.src = item.ruta_imagen;
+            listaFotos.appendChild(imagen);
+
+            var pie_imagen = document.createElement("span");
+            pie_imagen.textContent = item.pie_imagen;
+            listaFotos.appendChild(pie_imagen);
+
+            // Añadir eventos para mostrar y ocultar el precio destacado
+            imagen.addEventListener("mouseover", () => implementarDestacado(item.precio_noche, clase));
+            pie_imagen.addEventListener("mouseover", () => implementarDestacado(item.precio_noche, clase));
+            imagen.addEventListener("mouseout", ocultarDestacado);
+            pie_imagen.addEventListener("mouseout", ocultarDestacado);
+
+            lista.appendChild(clase);
+        });
+
+        // Cuando se genera la lista, se muestra y se cambia el título
+        titulo.appendChild(lista);
+        titulo.textContent = "Ocultar viajes"; // Cambiar título a "Ocultar"
+    } else {
+        // Si ya existe la lista, la eliminamos y cambiamos el título a "Mostrar"
+        titulo.removeChild(lista);
+        lista = null;  // Limpiar la referencia de lista
+        titulo.textContent = "Mostrar viajes"; // Cambiar título a "Mostrar"
+    }
+}
+
+// Función para mostrar el precio destacado sobre el precio de la noche
+function implementarDestacado(precioNoche, clase) {
+    var precioDestacado = document.createElement("p");
+    precioDestacado.className = "precioDestacado";
+    precioDestacado.textContent = "Precio por noche: $" + precioNoche;
+
+    // Aseguramos que solo haya un precio destacado
+    var precioExistente = clase.querySelector(".precioDestacado");
+    if (!precioExistente) {
+        clase.appendChild(precioDestacado);  // Añadir el precio destacado sobre el precio de la noche
+    }
+}
+
+// Función para ocultar el precio destacado
+function ocultarDestacado() {
+    var precioDestacado = this.closest("li").querySelector(".precioDestacado");
+    if (precioDestacado) {
+        precioDestacado.remove();  // Eliminar el precio destacado
+    }
+}
