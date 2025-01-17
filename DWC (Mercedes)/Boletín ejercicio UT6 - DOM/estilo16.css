@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#campoTexto {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#resultado {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resultado li {
+    background-color: #f1f1f1;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+}

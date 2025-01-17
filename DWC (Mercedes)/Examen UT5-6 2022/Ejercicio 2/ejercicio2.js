@@ -2,83 +2,98 @@
 window.addEventListener("load", inicializar, false);
 
 function inicializar() {
-    configurarFormulario(); // Configura el evento de envío del formulario
-    rellenarFormulario();  // Rellena el formulario con datos de cookies si existen
+
+    //Parte 1 del ejercicio
+    //cargarCookies();
+
+    cargarDatosSesion();
+    document.getElementById("formulario").addEventListener("submit", validarFormulario);
 }
 
-// Configura el evento de envío del formulario
-function configurarFormulario() {
-    const formulario = document.getElementById("formularioLogin");
-    formulario.addEventListener("submit", manejarSubmit);
+//Parte 1 del ejercicio
+/*function cargarCookies() {
+    let email = getCookie("email");
+    let departamento = getCookie("departamento");
+
+    if (email) document.getElementById("email").value = email;
+    if (departamento) document.getElementById("departamento").value = departamento;
+}*/
+
+function cargarDatosSesion() {
+    let email = sessionStorage.getItem("email");
+    let departamento = sessionStorage.getItem("departamento");
+
+    if (email) document.getElementById("email").value = email;
+    if (departamento) document.getElementById("departamento").value = departamento;
 }
 
-// Maneja el envío del formulario
-function manejarSubmit(event) {
-    event.preventDefault(); // Evitar recargar la página
+/* Si quisieramos hacerlo con localStorage sería así:
+    function cargarDatosLocal() {
+    let email = localStorage.getItem("email");
+    let departamento = localStorage.getItem("departamento");
 
-    const emailInput = document.getElementById("email");
-    const deptInput = document.getElementById("departamento");
+    if (email) document.getElementById("email").value = email;
+    if (departamento) document.getElementById("departamento").value = departamento;
+}
+*/
 
-    const emailValue = emailInput.value.trim();
-    const deptValue = deptInput.value.trim();
+function validarFormulario(event) {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
-    // Validar los datos del formulario
-    if (validarCorreo(emailValue) && deptValue) {
-        alert(`¡Formulario enviado con éxito!\nEmail: ${emailValue}\nDepartamento: ${deptValue}`);
-        
-        // Guardar datos en cookies
-        guardarEnCookies("email", emailValue, 7);
-        guardarEnCookies("departamento", deptValue, 7);
-    } else {
-        alert("Por favor, ingrese un correo válido de DWC y un departamento.");
+    var email = document.getElementById('email').value;
+    var departamento = document.getElementById('departamento').value;
+    let mensajeError = document.getElementById("oculto");
+    var regexCorreo = /^[a-zA-Z0-9._+-]+@dwc.com$/;
+
+    if (!regexCorreo.test(email)) {
+        mensajeError.textContent = "Correo no válido, debe ser un correo de la empresa DWC.";
+        return;
     }
+
+    // Guardar datos en sessionStorage (dura solo mientras el navegador está abierto)
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("departamento", departamento);
+
+    alert("Datos guardados correctamente. Se eliminarán al cerrar el navegador.");
+    document.getElementById("formulario").submit(); // Envía el formulario
+
+    // Guardar datos en localStorage (se mantienen aunque cierres el navegador)
+    /*localStorage.setItem("email", email);
+    localStorage.setItem("departamento", departamento);
+
+    alert("Datos guardados correctamente. Se mantendrán en el navegador hasta que los borres.");
+    document.getElementById("formulario").submit(); // Envía el formulario*/
+
+
+    //Parte 1 del ejercicio. Guardar datos en cookies 
+    /*setCookie("email", email, 365);
+    setCookie("departamento", departamento, 365);
+
+    alert("Datos guardados correctamente.");
+    document.getElementById("formulario").submit(); // Envía el formulario*/
 }
 
-// Función para validar el correo electrónico
-function validarCorreo(correo) {
-    const dwcRegex = /^[a-zA-Z0-9._%+-]+@dwc\.com$/;
-    return dwcRegex.test(correo);
-}
+//Parte 1 del ejercicio Función para crear una cookie
+/*function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}*/
 
-// Función para guardar datos en cookies
-function guardarEnCookies(nombre, valor, dias) {
-    const fecha = new Date();
-    fecha.setTime(fecha.getTime() + dias * 24 * 60 * 60 * 1000); // Convertir días a milisegundos
-    const expiracion = `expires=${fecha.toUTCString()}`;
-    document.cookie = `${nombre}=${valor}; ${expiracion}; path=/`;
-}
-
-// Función para obtener datos de cookies
-function obtenerDeCookies(nombre) {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-        const [key, value] = cookie.split("=");
-        if (key === nombre) {
-            return value;
-        }
+//Parte 1 del ejercicio Función para obtener una cookie
+/*function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
     }
     return null;
-}
-
-// Función para rellenar el formulario con datos de cookies
-function rellenarFormulario() {
-    const emailInput = document.getElementById("email");
-    const deptInput = document.getElementById("departamento");
-
-    const emailCookie = obtenerDeCookies("email");
-    const deptCookie = obtenerDeCookies("departamento");
-
-    if (emailCookie) emailInput.value = emailCookie;
-    if (deptCookie) deptInput.value = deptCookie;
-}
-
-
-
-
-
-
-
-
+}*/
 
 
 

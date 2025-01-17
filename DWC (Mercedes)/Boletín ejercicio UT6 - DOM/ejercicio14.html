@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio DOM</title>
+    <script src="ejercicio14.js" defer></script>
+    <link rel="stylesheet" href="estilo14.css">
+</head>
+<body>
+
+    Crea una página con un div y permite arrastrarlo con el ratón a otro div.
+
+    <div class="contenedor" id="contenedor1">
+        <h2>Contenedor 1</h2>
+        <div class="elemento" id="elem1" draggable="true">Elemento 1</div>
+        <div class="elemento" id="elem2" draggable="true">Elemento 2</div>
+        <div class="elemento" id="elem3" draggable="true">Elemento 3</div>
+    </div>
+
+    <div class="contenedor" id="contenedor2">
+        <h2>Contenedor 2</h2>
+        <!-- Los elementos pueden ser movidos aquí -->
+    </div>
+
+    <div class="contenedor" id="papelera">
+        <h2>Papelera</h2>
+        <!-- Los elementos pueden ser eliminados aquí -->
+    </div>
+
+    <div class="contenedor" id="contenedor3">
+        <h2>Contenedor 3</h2>
+        <!-- Este es otro contenedor donde los elementos no pueden moverse -->
+    </div>
+
+</body>
+</html>

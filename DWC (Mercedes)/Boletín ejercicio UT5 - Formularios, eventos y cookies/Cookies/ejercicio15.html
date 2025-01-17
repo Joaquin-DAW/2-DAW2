@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies </title>
+    <script src="ejercicio14.js"></script>
+</head>
+
+<body>
+    Crear   un   formulario   que   pida   la   dirección   de   envío   del   usuario.   La   próxima   vez   que   
+    el usuario acceda a la página, se rellenará la dirección utilizando el valor de la cookie. 
+
+    <h1>Formulario de Dirección de Envío</h1>
+    <p>Ingrese su dirección de envío. Se recordará para la próxima vez que visite la página.</p>
+
+    <form id="formulario_envio">
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required><br><br>
+        
+        <input type="submit" value="Guardar Dirección">
+    </form>
+
+    <p id="mensaje"></p>
+</body>
+
+</html>

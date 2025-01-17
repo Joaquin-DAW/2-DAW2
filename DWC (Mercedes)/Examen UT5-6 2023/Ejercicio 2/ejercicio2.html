@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Examen</title>
+    <script src="ejercicio2.js" defer></script>
+</head>
+<body>
+    Crea un formulario con un campo de texto para introducir el código de un producto. El código debe cumplir obligatoriamente el 
+    siguiente formato: tres letras, guión y de 1 a 5 números (ej: ASX-23). Si el campo no es correcto, debe mostrar al salir del campo 
+    un mensaje que informe al usuario.
+    El formulario también debe tener un botón para ser enviado, pero este no se enviará si el código no se ha introducido correctamente. 
+    Además en el momento en que se envía el formulario, el código debe ser almacenado en el navegador de forma permanente sin necesidad 
+    de que pase por el servidor.
+
+    <h1>Formulario</h1>
+    <form id="formulario" action="#" method="post">
+        <label for="codigo">Código Producto:</label>
+        <input type="text" id="codigo" name="codigo" placeholder="Código de producto">
+        <p id="mensajeError"></p>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

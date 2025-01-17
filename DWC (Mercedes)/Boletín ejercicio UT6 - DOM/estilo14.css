@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contenedor {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.elemento {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: move;
+    border-radius: 5px;
+}
+
+#papelera {
+    background-color: #f8d7da;
+}
+
+#papelera.dragover {
+    background-color: #f5c6cb;
+}
+
+#contenedor2, #contenedor3 {
+    background-color: #e9ecef;
+}
